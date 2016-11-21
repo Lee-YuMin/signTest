@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`Sign-element`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="Sign-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'Sign-element',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'Sign-element',
+        },
+      },
+
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+
+<dom-module id="sign-dialog">
+  <template>
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'sign-dialog',
+
+        behaviors: [
+          Things.GlobalBehavior,
+          Things.MsgBoxBehavior
+        ],
+
+        properties: {
+          /**
+           * 기본 Language가 설정되지 않았을 경우 defaultLanguage를 설정한다.
+           */
+          defaultLocale: {
+            type: String,
+            value: 'en-US'
+          }
+        },
+
+        observers:[
+          'onUrlReady(globals.baseUrl, globals.domReady)'
+        ]
+
+        open: function() {
+            this.$.dialog.open()
+        }
+      });
+    })();
+  </script>
+</dom-module>
