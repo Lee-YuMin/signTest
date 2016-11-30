@@ -1,9 +1,10 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-
+<link rel="import" href="../signature_pad/example/index.html">
 
 <dom-module id="sign-dialog">
   <template>
-
+    <canvas id="canvas" width="500" height="500" style="border:1px solid #000000;">
+    </canvas>
   </template>
 
   <script>
@@ -17,9 +18,10 @@
 
         },
 
-        open: function() {
-          console.log(123123)
-            // this.$.dialog.open()
+        dialog: function() {
+          console.log("sign")
+          var canvas = document.querySelector("canvas");
+          var signaturePad = new SignaturePad(canvas);
         }
       });
     })();

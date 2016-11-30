@@ -1,0 +1,59 @@
+
+    <!-- <link rel="import" href="../Sign-element.html"> -->
+    <!-- <link rel="import" href="./sign-dialog.html"> -->
+    <link rel="import" href="../bower_components/polymer/polymer.html">
+    <link rel="import" href="./sign-dialog.html">
+
+
+    <!-- <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html"> -->
+    <dom-module id="sign-button">
+      <template>
+        <style>
+          :host {
+            display: block;
+          }
+
+          button{
+            width: 300px;
+            height: 40px;
+            vertical-align: center;
+            font-size: 15px;
+          }
+
+        </style>
+
+
+          <div align="center">
+            <button id="dialog-button" on-click="open">sign</button>
+          </div>
+
+
+        <!-- <template is="dom-if" if="[[this.viewSign]]"> -->
+            <sign-dialog id="dialog"></sign-dialog>
+        <!-- </template> -->
+
+      </template>
+
+
+
+      <script>
+        (function() {
+          'use strict';
+          Polymer({
+            is: 'sign-button',
+
+            properties: {
+
+            },
+
+            open: function() {
+              // this.viewSign = true
+              console.log(this.$.dialog)
+
+              // this.$.dialog.open()
+            }
+          });
+        })();
+      </script>
+    </dom-module>
+</html>

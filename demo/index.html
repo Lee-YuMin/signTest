@@ -9,12 +9,14 @@
     <link rel="import" href="../bower_components/polymer/polymer.html">
     <!-- <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html"> -->
 
+    <link rel="import" href="./sign-button.html">
+    <dom-module id="main-index">
     <style>
       :host {
         display: block;
       }
 
-      button{
+      sign-button{
         width: 300px;
         height: 40px;
         vertical-align: center;
@@ -24,27 +26,9 @@
     </style>
 
 
-  <body>
-    <dom-module id="main-index">
-      <template>
-        <div align="center">
-          <button id="sign-button" onclick="open">sign</buttons>
-        </div>
+      <sign-button id="sign-button">
 
-        <!-- <sign-dialog id="dialog"></sign-dialog>
-
-        <paper-dialog>
-          <paper-dialog-scrollable>
-            Lorem ipsum...
-          </paper-dialog-scrollable>
-          <div class="buttons" >
-            <paper-button dialog-dismiss>Cancel</paper-button>
-            <paper-button dialog-confirm autofocus>Accept</paper-button>
-          </div>
-        </paper-dialog> -->
-      </template>
-    </dom-module>
-
+      </sign-button>
 
     <script>
       // (function() {
@@ -63,8 +47,5 @@
       //   });
       // })();
     </script>
-  </body>
-
-
-
+  </dom-module>
 </html>
