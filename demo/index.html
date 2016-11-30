@@ -1,35 +1,70 @@
-<!doctype html>
 <html lang="en">
-  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
     <title>Sign-element demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- <link rel="import" href="../Sign-element.html"> -->
+    <!-- <link rel="import" href="./sign-dialog.html"> -->
+    <link rel="import" href="../bower_components/polymer/polymer.html">
+    <!-- <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html"> -->
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../Sign-element.html">
+    <style>
+      :host {
+        display: block;
+      }
 
-    <style is="custom-style" include="demo-pages-shared-styles">
+      button{
+        width: 300px;
+        height: 40px;
+        vertical-align: center;
+        font-size: 15px;
+      }
+
     </style>
-  </head>
+
+
   <body>
-    <div class="vertical-section-container centered">
-      <button id="sign-button" onclick=>sign</buttons>
-    </div>
+    <dom-module id="main-index">
+      <template>
+        <div align="center">
+          <button id="sign-button" onclick="open">sign</buttons>
+        </div>
 
-    <paper-dialog>
-      <paper-dialog-scrollable>
-        Lorem ipsum...
-      </paper-dialog-scrollable>
-      <div class="buttons" >
-        <paper-button dialog-dismiss>Cancel</paper-button>
-        <paper-button dialog-confirm autofocus>Accept</paper-button>
-      </div>
-    </paper-dialog>
+        <!-- <sign-dialog id="dialog"></sign-dialog>
 
-    <button raised onclick="actions.open()">dialog with actions</button>
+        <paper-dialog>
+          <paper-dialog-scrollable>
+            Lorem ipsum...
+          </paper-dialog-scrollable>
+          <div class="buttons" >
+            <paper-button dialog-dismiss>Cancel</paper-button>
+            <paper-button dialog-confirm autofocus>Accept</paper-button>
+          </div>
+        </paper-dialog> -->
+      </template>
+    </dom-module>
+
+
+    <script>
+      // (function() {
+      //   'use strict';
+      //   Polymer({
+      //     is: 'main-index',
+      //
+      //     properties: {
+      //
+      //     },
+      //
+      //     open: function() {
+      //       console.log(123123)
+      //         // this.$.dialog.open()
+      //     }
+      //   });
+      // })();
+    </script>
   </body>
+
+
+
 </html>
